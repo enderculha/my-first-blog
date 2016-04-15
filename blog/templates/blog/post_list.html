@@ -1,9 +1,20 @@
 <html>
     <head>
-        <title>Ender'in blogu</title>
+        <title>Ender's blog</title>
     </head>
     <body>
-        <p>Merhaba!</p>
-        <p>Çalışıyor!</p>
+        <div>
+            <h1><a href="">Ender's blog></h1>
+        </div>
+
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.yayinlama_tarihi }}</p>
+        <h1><a href="">{{ post.baslik }}</a></h1>
+        <p>{{ post.yazi|linebreaks }}</p>
+    </div>
+{% endfor %}
+
+        
     </body>
 </html>
